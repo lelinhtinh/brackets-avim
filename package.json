@@ -1,0 +1,19 @@
+{
+    "name": "baivong.avim",
+    "title": "Bộ gõ Tiếng Việt AVIM",
+    "description": "Hỗ trợ gõ Tiếng Việt trong Brackets, không bị lỗi chức năng Autocomplete khi dùng trên Linux. Lưu ý: Tắt bộ gõ Tiếng Việt trên máy (ví dụ: ibus-unikey) khi dùng extension này.",
+    "homepage": "https://github.com/baivong/brackets-avim",
+    "version": "0.9.0",
+    "author": "Zzbaivong",
+    "keywords": [
+        "Bộ gõ",
+        "keyboard",
+        "Tiếng Việt",
+        "Vietnamese",
+        "AVIM"
+    ],
+    "license": "MIT",
+    "engines": {
+        "brackets": ">=0.24.0"
+    }
+}
