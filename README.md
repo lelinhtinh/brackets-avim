@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #Brackets-AVIM
 Trên Linux, khi bạn gõ Tiếng Việt thông qua các bộ gõ như IBus, nó sẽ không trực tiếp nhúng ký tự ngay khi đang gõ. Chính vì thế, chức năng autocomplete trong Brackets sẽ không đưa ra gợi ý trong lúc bạn gõ qua nguyên âm và các ký tự đặt dấu.
 Extension Bộ gõ Tiếng Việt AVIM sẽ giúp khắc phục vấn đề đó.
@@ -33,3 +34,7 @@ Lưu lại và khởi chạy lại Brackets (**F5**).
 **Tác giả**: Đặng Trần Hiếu <lt2hieu2004@users.sf.net>
 **Trang chủ**: http://rhos.sourceforge.net/
 **Phiên bản**: 28-07-2008
+=======
+# brackets-avim
+Tích hợp bộ gõ AVIM vào Brackets
+>>>>>>> origin/master
