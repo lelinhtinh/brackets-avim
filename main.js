@@ -8,7 +8,8 @@ define(function (require, exports, module) {
         KeyBindingManager  = brackets.getModule("command/KeyBindingManager"),
         CommandManager     = brackets.getModule("command/CommandManager"),
         AppInit            = brackets.getModule("utils/AppInit"),
-        PreferencesManager = brackets.getModule("preferences/PreferencesManager");
+        PreferencesManager = brackets.getModule("preferences/PreferencesManager"),
+        StatusBar          = brackets.getModule("widgets/StatusBar");
 
     var COMMAND_ID      = "baivong.avim",
         COMMAND_AVIM_ON = COMMAND_ID + ".on",
@@ -18,7 +19,7 @@ define(function (require, exports, module) {
         avimMethod   = avimPreferences.get("method"),
         avimShortcut = avimPreferences.get("shortcut");
     
-    var $avimStatus = $("<div class='avim-status'></div>");
+    var $avimStatus = $("<div>");
     
     var avimMenu;
 
@@ -45,7 +46,7 @@ define(function (require, exports, module) {
         }
     }
     
-    function avimUpdateState() {
+    function avimUpdateState(indicator) {
         if (avimPreferences.get("on")) {
             avimOn = false;
             AVIMObj.setMethod(-1);
@@ -80,10 +81,10 @@ define(function (require, exports, module) {
     
     KeyBindingManager.addBinding(COMMAND_AVIM_ON, avimShortcut);
     
-    $avimStatus.appendTo("#status-indicators");
-    $avimStatus.addClass("btn-status-bar");
-    $avimStatus.attr("title", "Nhấp vào để bật/tắt AVIM");
-    $avimStatus.on("click", avimUpdateState);
+    StatusBar.addIndicator("avim-status", $avimStatus.click(function (e) {
+        e.preventDefault();
+        avimUpdateState();
+    }), true, "btn btn-status-bar", "Nhấp vào để bật/tắt AVIM", "status-overwrite");
 
 });
 
