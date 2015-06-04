@@ -8,31 +8,24 @@ Extension này sẽ tích hợp bộ gõ AVIM vào Brackets, hỗ trợ bạn g�
 
 ###Cách 1
 
-1. Tải **Brackets-AVIM** về máy https://github.com/baivong/brackets-avim/archive/master.zip
-2. Giải nén và chép vào thư mục **extensions / user** của Brackets (**Help > Show Extensions Folder**).
-3. Khởi chạy lại Brackets (**F5**).
-
-###Cách 2
-
 1. Mở trình quản lý Extension (**File > Extension Manager...**).
 2. Tìm Extension *Bộ gõ Tiếng Việt AVIM* với từ khoá ```AVIM```
 3. **Install** và khởi chạy lại Brackets (**F5**).
 
+###Cách 2
+
+1. Tải **Brackets-AVIM** về máy https://github.com/baivong/brackets-avim/archive/master.zip
+2. Giải nén và chép vào thư mục **extensions / user** của Brackets (**Help > Show Extensions Folder**).
+3. Khởi chạy lại Brackets (**F5**).
+
 ##Hướng dẫn
 
-Bật / tắt bằng cách chọn trên menu **Edit > Bộ gõ AVIM** hoặc sử dụng phím tắt **Ctrl-Shift-G**
+* Bật / tắt bằng cách chọn trên menu **Edit > Bộ gõ AVIM** hoặc sử dụng phím tắt **Ctrl-Shift-G**.
+*Chỉnh sửa phím tắt bằng cách **Debug > Open Preferences File** tìm thông số `baivong.avim.shortcut` và thay giá trị tương ứng, sau đó khởi chạy lại Brackets (**F5**)*.
 
-Chọn kiểu gõ **Debug > Open Preferences File** tìm thông số `baivong.avim.method` và thay giá trị tương ứng với kiểu gõ bạn cần:
 
-* **0** = AUTO
-* **1** = TELEX
-* **2** = VNI
-* **3** = VIQR
-* **4** = VIQR*
-
-Ví dụ, chọn kiểu gõ **VNI** thì dùng `"baivong.avim.method": 2`
-
-Lưu lại và khởi chạy lại Brackets (**F5**).
+* Chọn kiểu gõ từ tùy chọn ở thanh trạng thái.
+![Chọn kiểu gõ Tiếng Việt trong Brackets](http://i.imgur.com/OOaha45.png)
 
 ##Đồng tác giả
 

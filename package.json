@@ -3,7 +3,7 @@
     "title": "Bộ gõ Tiếng Việt AVIM",
     "description": "Hỗ trợ gõ Tiếng Việt trong Brackets, không bị lỗi chức năng Autocomplete khi dùng trên Linux. Lưu ý: Tắt bộ gõ Tiếng Việt trên máy (ví dụ: ibus-unikey) khi dùng extension này.",
     "homepage": "https://github.com/baivong/brackets-avim",
-    "version": "1.1.0",
+    "version": "1.2.0",
     "author": "Zzbaivong",
     "keywords": [
         "Bộ gõ",
