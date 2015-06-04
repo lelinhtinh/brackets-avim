@@ -4,17 +4,19 @@
 define(function (require, exports, module) {
     "use strict";
 
-    var Menus = brackets.getModule("command/Menus"),
-        AppInit = brackets.getModule("utils/AppInit"),
-        CommandManager = brackets.getModule("command/CommandManager"),
+    var Menus              = brackets.getModule("command/Menus"),
+        KeyBindingManager  = brackets.getModule("command/KeyBindingManager"),
+        CommandManager     = brackets.getModule("command/CommandManager"),
+        AppInit            = brackets.getModule("utils/AppInit"),
         PreferencesManager = brackets.getModule("preferences/PreferencesManager");
 
-    var COMMAND_ID = "baivong.avim",
+    var COMMAND_ID      = "baivong.avim",
         COMMAND_AVIM_ON = COMMAND_ID + ".on",
         avimPreferences = PreferencesManager.getExtensionPrefs(COMMAND_ID);
 
-    var avimOn = avimPreferences.get("on"),
-        avimMethod = avimPreferences.get("method");
+    var avimOn       = avimPreferences.get("on"),
+        avimMethod   = avimPreferences.get("method"),
+        avimShortcut = avimPreferences.get("shortcut");
 
     require("avim");
 
@@ -24,6 +26,11 @@ define(function (require, exports, module) {
 
     if (avimMethod === undefined) {
         avimPreferences.set("method", 0);
+    }
+    
+    if (avimShortcut === undefined) {
+        avimShortcut = "Ctrl-Shift-G";
+        avimPreferences.set("shortcut", avimShortcut);
     }
 
     var avimMenu = CommandManager.register("Bộ gõ AVIM", COMMAND_AVIM_ON, function () {
@@ -54,5 +61,7 @@ define(function (require, exports, module) {
     var menu = Menus.getMenu(Menus.AppMenuBar.EDIT_MENU);
     menu.addMenuDivider();
     menu.addMenuItem(COMMAND_AVIM_ON);
+    
+    KeyBindingManager.addBinding(COMMAND_AVIM_ON, avimShortcut);
 
 });
