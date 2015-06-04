@@ -20,8 +20,6 @@ define(function (require, exports, module) {
         avimMethod   = avimPreferences.get("method"),
         avimShortcut = avimPreferences.get("shortcut");
     
-    var $avimStatus = $("<div>");
-    
     var avimMenu, avimMethodSelect;
 
     require("avim");
