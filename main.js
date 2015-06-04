@@ -39,9 +39,9 @@ define(function (require, exports, module) {
 
     function avimUpdateStatus() {
         if (avimPreferences.get("on")) {
-            $avimStatus.text("AVIM: On");
+            $avimStatus.text("AVIM: Bật");
         } else {
-            $avimStatus.text("AVIM: Off");
+            $avimStatus.text("AVIM: Tắt");
         }
     }
     
@@ -82,6 +82,7 @@ define(function (require, exports, module) {
     
     $avimStatus.appendTo("#status-indicators");
     $avimStatus.addClass("btn-status-bar");
+    $avimStatus.attr("title", "Nhấp vào để bật/tắt AVIM");
     $avimStatus.on("click", avimUpdateState);
 
 });
