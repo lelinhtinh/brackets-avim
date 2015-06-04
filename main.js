@@ -9,7 +9,8 @@ define(function (require, exports, module) {
         CommandManager     = brackets.getModule("command/CommandManager"),
         AppInit            = brackets.getModule("utils/AppInit"),
         PreferencesManager = brackets.getModule("preferences/PreferencesManager"),
-        StatusBar          = brackets.getModule("widgets/StatusBar");
+        StatusBar          = brackets.getModule("widgets/StatusBar"),
+        DropdownButton     = brackets.getModule("widgets/DropdownButton").DropdownButton;
 
     var COMMAND_ID      = "baivong.avim",
         COMMAND_AVIM_ON = COMMAND_ID + ".on",
@@ -21,7 +22,7 @@ define(function (require, exports, module) {
     
     var $avimStatus = $("<div>");
     
-    var avimMenu;
+    var avimMenu, avimMethodSelect;
 
     require("avim");
 
@@ -31,12 +32,42 @@ define(function (require, exports, module) {
 
     if (avimMethod === undefined) {
         avimPreferences.set("method", 0);
+        avimMethod = avimPreferences.get("method");
     }
     
     if (avimShortcut === undefined) {
         avimShortcut = "Ctrl-Shift-G";
         avimPreferences.set("shortcut", avimShortcut);
     }
+    
+    function returnIndexOfMethod(method) {
+        switch (method) {
+        case "Telex":
+            return 1;
+        case "VNI":
+            return 2;
+        case "VIQR":
+            return 3;
+        case "VIQR*":
+            return 4;
+        default:
+            return 0;
+        }
+    }
+    
+    avimMethodSelect = new DropdownButton(
+        "",
+        ["Auto", "Telex", "VNI", "VIQR", "VIQR*"]
+    );
+    
+    avimMethodSelect.$button.text(avimMethodSelect.items[returnIndexOfMethod(avimMethod)]);
+    
+    avimMethodSelect.on("select", function (e, method) {
+        var i = returnIndexOfMethod(method);
+        AVIMObj.setMethod(i);
+        avimPreferences.set("method", i);
+        avimMethodSelect.$button.text(method);
+    });
 
     function avimUpdateStatus() {
         if (avimPreferences.get("on")) {
@@ -81,10 +112,23 @@ define(function (require, exports, module) {
     
     KeyBindingManager.addBinding(COMMAND_AVIM_ON, avimShortcut);
     
-    StatusBar.addIndicator("avim-status", $avimStatus.click(function (e) {
-        e.preventDefault();
-        avimUpdateState();
-    }), true, "btn btn-status-bar", "Nhấp vào để bật/tắt AVIM", "status-overwrite");
-
+    StatusBar.addIndicator(
+        "avim-status",
+        $avimStatus.click(function (e) { avimUpdateState(); }),
+        true,
+        "btn btn-status-bar",
+        "Nhấp vào để bật/tắt AVIM",
+        "status-overwrite"
+    );
+    
+    StatusBar.addIndicator(
+        "avim-method",
+        avimMethodSelect.$button,
+        true,
+        "btn btn-dropdown btn-status-bar",
+        "Thay đổi kiểu gõ",
+        "avim-status"
+    );
+    
 });
 
