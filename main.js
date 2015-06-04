@@ -20,14 +20,7 @@ define(function (require, exports, module) {
     
     var $avimStatus = $("<div class='avim-status'></div>");
     
-    $avimStatus.appendTo("#status-indicators");
-    var avimUpdateStatus = function () {
-        if (avimPreferences.get("on")) {
-            $avimStatus.text("AVIM: On");
-        } else {
-            $avimStatus.text("AVIM: Off");
-        }
-    };
+    var avimMenu;
 
     require("avim");
 
@@ -44,7 +37,15 @@ define(function (require, exports, module) {
         avimPreferences.set("shortcut", avimShortcut);
     }
 
-    var avimMenu = CommandManager.register("Bộ gõ AVIM", COMMAND_AVIM_ON, function () {
+    function avimUpdateStatus() {
+        if (avimPreferences.get("on")) {
+            $avimStatus.text("AVIM: On");
+        } else {
+            $avimStatus.text("AVIM: Off");
+        }
+    }
+    
+    function avimUpdateState() {
         if (avimPreferences.get("on")) {
             avimOn = false;
             AVIMObj.setMethod(-1);
@@ -55,7 +56,9 @@ define(function (require, exports, module) {
         avimMenu.setChecked(avimOn);
         avimPreferences.set("on", avimOn);
         avimUpdateStatus();
-    });
+    }
+    
+    avimMenu = CommandManager.register("Bộ gõ AVIM", COMMAND_AVIM_ON, avimUpdateState);
 
     if (avimOn) {
         avimMenu.setChecked(true);
@@ -76,6 +79,9 @@ define(function (require, exports, module) {
     menu.addMenuItem(COMMAND_AVIM_ON);
     
     KeyBindingManager.addBinding(COMMAND_AVIM_ON, avimShortcut);
+    
+    $avimStatus.appendTo("#status-indicators");
+    $avimStatus.on("click", avimUpdateState);
 
 });
 
