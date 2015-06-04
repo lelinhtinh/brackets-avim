@@ -81,6 +81,7 @@ define(function (require, exports, module) {
     KeyBindingManager.addBinding(COMMAND_AVIM_ON, avimShortcut);
     
     $avimStatus.appendTo("#status-indicators");
+    $avimStatus.addClass("btn-status-bar");
     $avimStatus.on("click", avimUpdateState);
 
 });
