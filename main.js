@@ -40,55 +40,46 @@ define(function (require, exports, module) {
         avimPreferences.set("shortcut", avimShortcut);
     }
     
-    function returnIndexOfMethod(method) {
-        switch (method) {
-        case "Telex":
-            return 1;
-        case "VNI":
-            return 2;
-        case "VIQR":
-            return 3;
-        case "VIQR*":
-            return 4;
-        default:
-            return 0;
-        }
-    }
-    
-    avimMethodSelect = new DropdownButton(
-        "",
-        ["Auto", "Telex", "VNI", "VIQR", "VIQR*"]
-    );
-    
-    avimMethodSelect.$button.text(avimMethodSelect.items[returnIndexOfMethod(avimMethod)]);
-    
-    avimMethodSelect.on("select", function (e, method) {
-        var i = returnIndexOfMethod(method);
-        AVIMObj.setMethod(i);
-        avimPreferences.set("method", i);
-        avimMethodSelect.$button.text(method);
-    });
-
-    function avimUpdateStatus() {
-        if (avimPreferences.get("on")) {
-            $avimStatus.text("AVIM: Bật");
+    function updateDropdownButtonText() {
+        if (!avimOn) {
+            avimMethodSelect.$button.text("AVIM OFF");
         } else {
-            $avimStatus.text("AVIM: Tắt");
+            avimMethodSelect.$button.text(avimMethodSelect.items[avimMethod]);
         }
     }
     
     function avimUpdateState() {
-        if (avimPreferences.get("on")) {
+        if (avimOn) {
             avimOn = false;
             AVIMObj.setMethod(-1);
         } else {
             avimOn = true;
-            AVIMObj.setMethod(avimPreferences.get("method"));
+            AVIMObj.setMethod(avimMethod);
         }
         avimMenu.setChecked(avimOn);
         avimPreferences.set("on", avimOn);
-        avimUpdateStatus();
+        updateDropdownButtonText();
     }
+    
+    avimMethodSelect = new DropdownButton(
+        "",
+        ["Auto", "Telex", "VNI", "VIQR", "VIQR*", "---", "AVIM OFF"]
+    );
+    
+    avimMethodSelect.on("select", function (e, method, currentIndex) {
+        if (currentIndex === 6) {
+            avimOn = false;
+            AVIMObj.setMethod(-1);
+        } else {
+            avimOn = true;
+            avimMethod = currentIndex;
+            AVIMObj.setMethod(avimMethod);
+            avimPreferences.set("method", avimMethod);
+        }
+        avimMenu.setChecked(avimOn);
+        avimPreferences.set("on", avimOn);
+        updateDropdownButtonText();
+    });
     
     avimMenu = CommandManager.register("Bộ gõ AVIM", COMMAND_AVIM_ON, avimUpdateState);
 
@@ -103,7 +94,7 @@ define(function (require, exports, module) {
         } else {
             AVIMObj.setMethod(-1);
         }
-        avimUpdateStatus(); // Show AVIM status on startup
+        updateDropdownButtonText(); // Show status at startup
     });
 
     var menu = Menus.getMenu(Menus.AppMenuBar.EDIT_MENU);
@@ -113,21 +104,12 @@ define(function (require, exports, module) {
     KeyBindingManager.addBinding(COMMAND_AVIM_ON, avimShortcut);
     
     StatusBar.addIndicator(
-        "avim-status",
-        $avimStatus.click(function (e) { avimUpdateState(); }),
-        true,
-        "btn btn-status-bar",
-        "Nhấp vào để bật/tắt AVIM",
-        "status-overwrite"
-    );
-    
-    StatusBar.addIndicator(
         "avim-method",
         avimMethodSelect.$button,
         true,
         "btn btn-dropdown btn-status-bar",
         "Thay đổi kiểu gõ",
-        "avim-status"
+        "status-overwrite"
     );
     
 });
