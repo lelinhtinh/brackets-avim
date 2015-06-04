@@ -46,7 +46,7 @@ define(function (require, exports, module) {
         }
     }
     
-    function avimUpdateState(indicator) {
+    function avimUpdateState() {
         if (avimPreferences.get("on")) {
             avimOn = false;
             AVIMObj.setMethod(-1);
