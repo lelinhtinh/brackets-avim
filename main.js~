@@ -1,5 +1,5 @@
 /*jslint vars: true, plusplus: true, devel: true, nomen: true, regexp: true, indent: 4, maxerr: 50 */
-/*global define, brackets, AVIMObj, $ */
+/*global define, brackets, AVIMObj */
 
 define(function (require, exports, module) {
     "use strict";
@@ -17,17 +17,6 @@ define(function (require, exports, module) {
     var avimOn       = avimPreferences.get("on"),
         avimMethod   = avimPreferences.get("method"),
         avimShortcut = avimPreferences.get("shortcut");
-    
-    var $avimStatus = $("<div class='avim-status'></div>");
-    
-    $avimStatus.appendTo("#status-indicators");
-    var avimUpdateStatus = function () {
-        if (avimPreferences.get("on")) {
-            $avimStatus.text("AVIM: On");
-        } else {
-            $avimStatus.text("AVIM: Off");
-        }
-    };
 
     require("avim");
 
@@ -54,7 +43,6 @@ define(function (require, exports, module) {
         }
         avimMenu.setChecked(avimOn);
         avimPreferences.set("on", avimOn);
-        avimUpdateStatus();
     });
 
     if (avimOn) {
@@ -68,7 +56,6 @@ define(function (require, exports, module) {
         } else {
             AVIMObj.setMethod(-1);
         }
-        avimUpdateStatus(); // Show AVIM status on startup
     });
 
     var menu = Menus.getMenu(Menus.AppMenuBar.EDIT_MENU);
@@ -78,4 +65,3 @@ define(function (require, exports, module) {
     KeyBindingManager.addBinding(COMMAND_AVIM_ON, avimShortcut);
 
 });
-
