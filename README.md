@@ -21,7 +21,7 @@ Extension này sẽ tích hợp bộ gõ AVIM vào Brackets, hỗ trợ bạn g�
 ##Hướng dẫn
 
 * Bật / tắt bằng cách chọn trên menu **Edit > Bộ gõ AVIM** hoặc sử dụng phím tắt **Ctrl-Shift-G**.
-*Chỉnh sửa phím tắt bằng cách **Debug > Open Preferences File** tìm thông số `baivong.avim.shortcut` và thay giá trị tương ứng, sau đó khởi chạy lại Brackets (**F5**)*.
+Chỉnh sửa phím tắt bằng cách **Debug > Open Preferences File** tìm thông số `baivong.avim.shortcut` và thay giá trị tương ứng, sau đó khởi chạy lại Brackets (**F5**).
 
 
 * Chọn kiểu gõ từ tùy chọn ở thanh trạng thái.
@@ -29,7 +29,8 @@ Extension này sẽ tích hợp bộ gõ AVIM vào Brackets, hỗ trợ bạn g�
 
 ##Đồng tác giả
 
-1. [Hong Nguyen](https://github.com/nghong)
+1. [Zzbaivong](https://github.com/baivong)
+2. [Hong Nguyen](https://github.com/nghong)
 
 ##Thông tin bộ gõ AVIM
 
