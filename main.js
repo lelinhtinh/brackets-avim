@@ -69,21 +69,21 @@ define(function (require) {
 
         avimOn = avimPreferences.get("on"); // Lấy trạng thái bật/tắt
         
-        var currMethod = avimPreferences.get("method");
+        avimMethod = avimPreferences.get("method"); // Lấy thông số kiểu gõ hiện tại
 
         // Thiết lập trạng thái bộ gõ và kiểu gõ
         if (avimOn) {
-            AVIMObj.setMethod(currMethod);
-            $DropdownMethod.$button.text(avimLabel[currMethod]);
+            AVIMObj.setMethod(avimMethod);
+            $DropdownMethod.$button.text(avimLabel[avimMethod]);
         } else {
             AVIMObj.setMethod(-1);
-            currMethod = 6; // OFF
+            avimMethod = 6; // OFF
         }
 
         avimMenu.setChecked(avimOn); // Đánh dấu bật/tắt trên menu
         
         // Cập nhật thanh trạng thái kiểu gõ
-        $DropdownMethod.$button.text(avimLabel[currMethod]);
+        $DropdownMethod.$button.text(avimLabel[avimMethod]);
     }
     
     /**
