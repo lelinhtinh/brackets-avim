@@ -39,3 +39,7 @@ Chỉnh sửa phím tắt bằng cách **Debug > Open Preferences File** tìm th
 **Trang chủ**: http://rhos.sourceforge.net/
 
 **Phiên bản**: 28-07-2008
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/baivong/brackets-avim/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
