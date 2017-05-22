@@ -1,19 +1,35 @@
 {
-    "name": "baivong.avim",
-    "title": "Bộ gõ Tiếng Việt AVIM",
-    "description": "Hỗ trợ gõ Tiếng Việt trong Brackets, không bị lỗi chức năng Autocomplete khi dùng trên Linux. Lưu ý: Tắt bộ gõ Tiếng Việt trên máy (ví dụ: ibus-unikey) khi dùng extension này.",
-    "homepage": "https://github.com/baivong/brackets-avim",
-    "version": "1.2.1",
-    "author": "Zzbaivong",
-    "keywords": [
-        "Bộ gõ",
-        "keyboard",
-        "Tiếng Việt",
-        "Vietnamese",
-        "AVIM"
-    ],
-    "license": "MIT",
-    "engines": {
-        "brackets": ">=0.24.0"
-    }
+  "name": "baivong.avim",
+  "title": "Bộ gõ Tiếng Việt AVIM",
+  "description": "Hỗ trợ gõ Tiếng Việt trong Brackets, không bị lỗi chức năng autocomplete khi dùng trên Linux. Lưu ý: Tắt bộ gõ Tiếng Việt trên máy khi dùng extension này.",
+  "homepage": "https://github.com/baivong/brackets-avim",
+  "version": "1.2.2",
+  "contributors": [
+    "Zzbaivong <Zzbaivong@gmail.com> (https://baivong.github.io)",
+    "Hong Nguyen <nghongbk@gmail.com> (https://nghong.github.io)"
+  ],
+  "author": "Zzbaivong <Zzbaivong@gmail.com> (https://baivong.github.io)",
+  "keywords": [
+    "Bộ gõ",
+    "keyboard",
+    "Tiếng Việt",
+    "Vietnamese",
+    "AVIM",
+    "brackets-extension"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/baivong/brackets-avim.git"
+  },
+  "license": "MIT",
+  "engines": {
+    "brackets": ">=0.24.0"
+  },
+  "bugs": {
+    "url": "https://github.com/baivong/brackets-avim/issues"
+  },
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
 }

@@ -1,41 +1,45 @@
-#Brackets-AVIM
+# Brackets-AVIM
 
-Extension này sẽ tích hợp bộ gõ AVIM vào Brackets, hỗ trợ bạn gõ được Tiếng Việt mà không cần đến bộ gõ bên ngoài. Quan trọng nhất là, trên Linux, bộ gõ Tiếng Việt AVIM giúp bạn không gặp lỗi khi sử dụng chức năng Autocomplete như khi dùng các bộ gõ trên máy.
+Extension này sẽ tích hợp bộ gõ AVIM vào Brackets, hỗ trợ bạn gõ được Tiếng Việt mà không cần đến bộ gõ bên ngoài.
 
-**Lưu ý**: *Tắt bộ gõ Tiếng Việt trên máy (ví dụ: ibus-unikey) khi dùng extension này.*
+Quan trọng nhất là, trên Linux, bộ gõ Tiếng Việt AVIM giúp bạn không gặp lỗi khi sử dụng chức năng autocomplete như khi dùng các bộ gõ trên máy.
 
-##Cài đặt
+**Lưu ý**: *Tắt bộ gõ Tiếng Việt trên máy khi dùng extension này. Ví dụ: ibus-unikey, fcitx-unikey, ...*
 
-###Cách 1
+## Cài đặt
 
-1. Mở trình quản lý Extension (**File > Extension Manager...**).
-2. Tìm Extension *Bộ gõ Tiếng Việt AVIM* với từ khoá ```AVIM```
-3. **Install** và khởi chạy lại Brackets (**F5**).
+### Cách 1
 
-###Cách 2
+1. Mở trình quản lý Extension (**File > Extension Manager...**)
+2. Tìm Extension *Bộ gõ Tiếng Việt AVIM* với từ khoá `AVIM`
+3. Nhấn **Install**
+
+### Cách 2
 
 1. Tải **Brackets-AVIM** về máy https://github.com/baivong/brackets-avim/archive/master.zip
-2. Giải nén và chép vào thư mục **extensions / user** của Brackets (**Help > Show Extensions Folder**).
-3. Khởi chạy lại Brackets (**F5**).
+2. Giải nén và chép vào thư mục **extensions / user** của Brackets (**Help > Show Extensions Folder**)
+3. Khởi chạy lại Brackets (**F5**)
 
-##Hướng dẫn
+## Hướng dẫn
 
-* Bật / tắt bằng cách chọn trên menu **Edit > Bộ gõ AVIM** hoặc sử dụng phím tắt **Ctrl-Shift-G**.
+Bật / tắt bằng cách chọn trên menu **Edit > Bộ gõ AVIM** hoặc sử dụng phím tắt **Ctrl-Shift-G**.
+
 Chỉnh sửa phím tắt bằng cách **Debug > Open Preferences File** tìm thông số `baivong.avim.shortcut` và thay giá trị tương ứng, sau đó khởi chạy lại Brackets (**F5**).
 
 
-* Chọn kiểu gõ từ tùy chọn ở thanh trạng thái.
-![Chọn kiểu gõ Tiếng Việt trong Brackets](http://i.imgur.com/OOaha45.png)
+Chọn kiểu gõ từ tùy chọn ở thanh trạng thái.
 
-##Đồng tác giả
+![Chọn kiểu gõ Tiếng Việt trong Brackets](screenshot.png)
+
+## Đồng tác giả
 
 1. [Zzbaivong](https://github.com/baivong)
 2. [Hong Nguyen](https://github.com/nghong)
 
-##Thông tin bộ gõ AVIM
+## Thông tin bộ gõ AVIM
 
 **Tác giả**: Đặng Trần Hiếu <lt2hieu2004@users.sf.net>
 
-**Trang chủ**: http://rhos.sourceforge.net/
+**Trang chủ**: [sf.net/p/rhos](https://sourceforge.net/projects/rhos/)
 
 **Phiên bản**: 28-07-2008
