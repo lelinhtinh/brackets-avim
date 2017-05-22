@@ -60,7 +60,7 @@ define(function (require) {
             ddMethod.$button.text(COMMAND_LABEL[6]);
         }
 
-        if (currentMethod < 0 || currentMethod > 4) currentMethod = -1;
+        if (currentMethod < 0 || currentMethod > 4 || !isActive) currentMethod = -1;
         AVIMObj.setMethod(currentMethod);
     });
 
