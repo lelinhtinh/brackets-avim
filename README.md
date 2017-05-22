@@ -11,21 +11,18 @@ Quan trọng nhất là, trên Linux, bộ gõ Tiếng Việt AVIM giúp bạn k
 ### Cách 1
 
 1. Mở trình quản lý Extension (**File > Extension Manager...**)
-2. Tìm Extension *Bộ gõ Tiếng Việt AVIM* với từ khoá `AVIM`
+2. Tìm Extension **Bộ gõ Tiếng Việt AVIM** với từ khoá `AVIM`
 3. Nhấn **Install**
 
 ### Cách 2
 
-1. Tải **Brackets-AVIM** về máy https://github.com/baivong/brackets-avim/archive/master.zip
+1. Tải [brackets-avim.zip](https://github.com/baivong/brackets-avim/releases) về máy
 2. Giải nén và chép vào thư mục **extensions / user** của Brackets (**Help > Show Extensions Folder**)
 3. Khởi chạy lại Brackets (**F5**)
 
 ## Hướng dẫn
 
-Bật / tắt bằng cách chọn trên menu **Edit > Bộ gõ AVIM** hoặc sử dụng phím tắt **Ctrl-Shift-G**.
-
-Chỉnh sửa phím tắt bằng cách **Debug > Open Preferences File** tìm thông số `baivong.avim.shortcut` và thay giá trị tương ứng, sau đó khởi chạy lại Brackets (**F5**).
-
+Bật / tắt bằng cách chọn trên menu **Edit > Bộ gõ AVIM**.
 
 Chọn kiểu gõ từ tùy chọn ở thanh trạng thái.
 
