@@ -1,5 +1,7 @@
 # Brackets-AVIM
 
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Flelinhtinh%2Fbrackets-avim.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Flelinhtinh%2Fbrackets-avim?ref=badge_shield)
+
 Extension này sẽ tích hợp bộ gõ AVIM vào Brackets, hỗ trợ bạn gõ được Tiếng Việt mà không cần đến bộ gõ bên ngoài.
 
 Quan trọng nhất là, trên Linux, bộ gõ Tiếng Việt AVIM giúp bạn không gặp lỗi khi sử dụng chức năng autocomplete như khi dùng các bộ gõ trên máy.
@@ -16,7 +18,7 @@ Quan trọng nhất là, trên Linux, bộ gõ Tiếng Việt AVIM giúp bạn k
 
 ### Cách 2
 
-1. Tải [brackets-avim.zip](https://github.com/baivong/brackets-avim/releases) về máy
+1. Tải [brackets-avim.zip](https://github.com/lelinhtinh/brackets-avim/releases) về máy
 2. Giải nén và chép vào thư mục **extensions / user** của Brackets (**Help > Show Extensions Folder**)
 3. Khởi chạy lại Brackets (**F5**)
 
@@ -27,11 +29,10 @@ Bật / tắt bằng cách chọn trên menu **Edit > Bộ gõ AVIM**.
 Chọn kiểu gõ từ tùy chọn ở thanh trạng thái.
 
 ![Chọn kiểu gõ Tiếng Việt trong Brackets](screenshot.png)
-[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Flelinhtinh%2Fbrackets-avim.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Flelinhtinh%2Fbrackets-avim?ref=badge_shield)
 
 ## Đồng tác giả
 
-1. [Zzbaivong](https://github.com/baivong)
+1. [Zzbaivong](https://github.com/lelinhtinh)
 2. [Hong Nguyen](https://github.com/nghong)
 
 ## Thông tin bộ gõ AVIM
@@ -44,4 +45,5 @@ Chọn kiểu gõ từ tùy chọn ở thanh trạng thái.
 
 
 ## License
+
 [![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Flelinhtinh%2Fbrackets-avim.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Flelinhtinh%2Fbrackets-avim?ref=badge_large)
