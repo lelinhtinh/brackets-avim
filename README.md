@@ -27,6 +27,7 @@ Bật / tắt bằng cách chọn trên menu **Edit > Bộ gõ AVIM**.
 Chọn kiểu gõ từ tùy chọn ở thanh trạng thái.
 
 ![Chọn kiểu gõ Tiếng Việt trong Brackets](screenshot.png)
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Flelinhtinh%2Fbrackets-avim.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Flelinhtinh%2Fbrackets-avim?ref=badge_shield)
 
 ## Đồng tác giả
 
@@ -40,3 +41,7 @@ Chọn kiểu gõ từ tùy chọn ở thanh trạng thái.
 **Trang chủ**: [sf.net/p/rhos](https://sourceforge.net/projects/rhos/)
 
 **Phiên bản**: 28-07-2008
+
+
+## License
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Flelinhtinh%2Fbrackets-avim.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Flelinhtinh%2Fbrackets-avim?ref=badge_large)
