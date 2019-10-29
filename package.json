@@ -33,6 +33,6 @@
 	"test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
-	"eslint": "^3.19.0"
+	"eslint": "^6.6.0"
   }
 }
